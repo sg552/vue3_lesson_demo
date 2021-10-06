@@ -53,11 +53,11 @@
       </router-link></li>
       <li>
         <router-link :to="{name: 'CompositionApiDemoOne'}">
-          composition API 1. 简单版(emscript)
+          composition API
         </router-link> 与
-        <router-link to="/non_composition_api">
-          options API (选项式API)
-        </router-link> 与
+        <router-link :to="{name: 'CompositionApiDemoOneEquivalenceFromOptionApi'}">
+          等效的 option API
+        </router-link>
       </li>
 
       <li>

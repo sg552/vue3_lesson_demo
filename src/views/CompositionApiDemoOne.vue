@@ -32,6 +32,7 @@ export default {
       fruit.color = colors[index]
     }
 
+    // 这里返回的count 等可以直接在 template中使用, 例如{{count}}
     return {
       count,
       change,

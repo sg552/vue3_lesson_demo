@@ -20,6 +20,7 @@ import CompositionApi from '@/views/CompositionApi'
 import NonCompositionApi from '@/views/NonCompositionApi'
 
 import CompositionApiDemoOne from '@/views/CompositionApiDemoOne'
+import CompositionApiDemoOneEquivalenceFromOptionApi from '@/views/CompositionApiDemoOneEquivalenceFromOptionApi'
 
 import ProvideLevelOne from '@/views/ProvideLevelOne'
 import ProvideLevelTwo from '@/components/ProvideLevelTwo'
@@ -108,6 +109,11 @@ const routes = [
       path: '/composition_api_demo_one',
       name: 'CompositionApiDemoOne',
       component: CompositionApiDemoOne
+    },
+    {
+      path: '/composition_api_demo_one_eq_option_api',
+      name: 'CompositionApiDemoOneEquivalenceFromOptionApi',
+      component: CompositionApiDemoOneEquivalenceFromOptionApi
     },
     {
       path: '/non_composition_api',
