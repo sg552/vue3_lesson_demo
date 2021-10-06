@@ -46,7 +46,11 @@
       <li>
           单元测试: 在控制台,运行该命令即可: $ npm run test:unit <br/>
           具体内容见 tests/unit/calculator.spec.js 和 src/lib/calculator.js
-        </li>
+      </li>
+
+      <li><router-link :to="{name: 'ProvideLevelOne'}">
+          Provide 和 Inject 例子1 (选项式 API)
+      </router-link></li>
       <li>
         <router-link :to="{name: 'CompositionApiDemoOne'}">
           composition API 1. 简单版(emscript)

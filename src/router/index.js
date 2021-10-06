@@ -20,7 +20,10 @@ import CompositionApi from '@/views/CompositionApi'
 import NonCompositionApi from '@/views/NonCompositionApi'
 
 import CompositionApiDemoOne from '@/views/CompositionApiDemoOne'
-import CompositionApiDemoTwoWithTypescript from '@/views/CompositionApiDemoTwoWithTypescript'
+
+import ProvideLevelOne from '@/views/ProvideLevelOne'
+import ProvideLevelTwo from '@/components/ProvideLevelTwo'
+import ProvideLevelThree from '@/components/ProvideLevelThree'
 
 const routes = [
     {
@@ -92,6 +95,11 @@ const routes = [
       component: ShowCounter2
     },
     {
+      path: '/provide_and_inject',
+      name: 'ProvideLevelOne',
+      component: ProvideLevelOne
+    },
+    {
       path: '/composition_api',
       name: 'CompositionApi',
       component: CompositionApi
@@ -100,11 +108,6 @@ const routes = [
       path: '/composition_api_demo_one',
       name: 'CompositionApiDemoOne',
       component: CompositionApiDemoOne
-    },
-    {
-      path: '/composition_api_demo_two_with_typescript',
-      name: 'CompositionApiDemoTwoWithTypescript',
-      component: CompositionApiDemoTwoWithTypescript
     },
     {
       path: '/non_composition_api',
