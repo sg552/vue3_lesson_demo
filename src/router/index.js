@@ -16,6 +16,11 @@ import SayHiFromMixin from '@/views/SayHiFromMixin'
 import ShowCounter1 from '@/views/ShowCounter1'
 import ShowCounter2 from '@/views/ShowCounter2'
 
+import CompositionApi from '@/views/CompositionApi'
+import NonCompositionApi from '@/views/NonCompositionApi'
+
+import CompositionApiDemoOne from '@/views/CompositionApiDemoOne'
+import CompositionApiDemoTwoWithTypescript from '@/views/CompositionApiDemoTwoWithTypescript'
 
 const routes = [
     {
@@ -29,6 +34,10 @@ const routes = [
       name: 'Hello',
       component: Hello
     },
+
+  /* 下面的name: 'SayHi' 可以省略, 在view中 这样调用即可
+   * <router-link to="/say_hi"> SayHi </router-link>
+   */
     {
       path: '/say_hi',
       name: 'SayHi',
@@ -81,6 +90,25 @@ const routes = [
       path: '/show_counter_2',
       name: 'ShowCounter2',
       component: ShowCounter2
+    },
+    {
+      path: '/composition_api',
+      name: 'CompositionApi',
+      component: CompositionApi
+    },
+    {
+      path: '/composition_api_demo_one',
+      name: 'CompositionApiDemoOne',
+      component: CompositionApiDemoOne
+    },
+    {
+      path: '/composition_api_demo_two_with_typescript',
+      name: 'CompositionApiDemoTwoWithTypescript',
+      component: CompositionApiDemoTwoWithTypescript
+    },
+    {
+      path: '/non_composition_api',
+      component: NonCompositionApi
     },
 ]
 

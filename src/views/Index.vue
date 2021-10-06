@@ -5,7 +5,7 @@
       <li><router-link :to="{name: 'Hello'}">
           Hello
         </router-link>:  显示最基本的Vuejs</li>
-      <li><router-link :to="{name: 'SayHi'}">
+      <li><router-link to="/say_hi">
           SayHi
         </router-link>:  第一个Vue页面</li>
       <li><router-link :to="{name: 'SayHiFromVariable'}">
@@ -43,6 +43,27 @@
       <li><router-link :to="{name: 'ShowCounter2'}">
           倒计时页面2
         </router-link></li>
+      <li>
+          单元测试: 在控制台,运行该命令即可: $ npm run test:unit <br/>
+          具体内容见 tests/unit/calculator.spec.js 和 src/lib/calculator.js
+        </li>
+      <li>
+        <router-link :to="{name: 'CompositionApiDemoOne'}">
+          composition API 1. 简单版(emscript)
+        </router-link> 与
+        <router-link to="/non_composition_api">
+          options API (选项式API)
+        </router-link> 与
+      </li>
+
+      <li>
+        <router-link :to="{name: 'CompositionApi'}">
+          composition API (vue3新特性, 组合式API)
+        </router-link> 与
+        <router-link to="/non_composition_api">
+          options API (选项式API)
+        </router-link>
+      </li>
 
     </ul>
     <p>文字版教程在: <a href=https://github.com/sg552/happy_book_vuejs>https://github.com/sg552/happy_book_vuejs</a></p>
