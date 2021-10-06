@@ -48,15 +48,20 @@
           具体内容见 tests/unit/calculator.spec.js 和 src/lib/calculator.js
       </li>
 
-      <li><router-link :to="{name: 'ProvideLevelOne'}">
-          Provide 和 Inject 例子1 (选项式 API)
-      </router-link></li>
       <li>
         <router-link :to="{name: 'CompositionApiDemoOne'}">
-          composition API
+          composition API demo 1
         </router-link> 与
         <router-link :to="{name: 'CompositionApiDemoOneEquivalenceFromOptionApi'}">
           等效的 option API
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'CompositionApiProvideLevelOne'}">
+          composition API demo 2(provide/inject)
+        </router-link> 与
+        <router-link :to="{name: 'ProvideLevelOne'}">
+          等效的 option API (provide/inject)
         </router-link>
       </li>
 

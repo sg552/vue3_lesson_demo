@@ -25,6 +25,7 @@ import CompositionApiDemoOneEquivalenceFromOptionApi from '@/views/CompositionAp
 import ProvideLevelOne from '@/views/ProvideLevelOne'
 import ProvideLevelTwo from '@/components/ProvideLevelTwo'
 import ProvideLevelThree from '@/components/ProvideLevelThree'
+import CompositionApiProvideLevelOne from '@/views/CompositionApiProvideLevelOne'
 
 const routes = [
     {
@@ -114,6 +115,11 @@ const routes = [
       path: '/composition_api_demo_one_eq_option_api',
       name: 'CompositionApiDemoOneEquivalenceFromOptionApi',
       component: CompositionApiDemoOneEquivalenceFromOptionApi
+    },
+    {
+      path: '/composition_api_demo_two_provide_and_inject',
+      name: 'CompositionApiProvideLevelOne',
+      component: CompositionApiProvideLevelOne
     },
     {
       path: '/non_composition_api',
