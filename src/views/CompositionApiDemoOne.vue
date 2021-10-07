@@ -13,7 +13,9 @@ import {ref, reactive } from 'vue';
 
 export default {
   setup () {
+    // ref　给基本类型使用，例如 number, string
     const count = ref(0)
+    // reactive 给对象使用，例如Hash, Array等
     const fruit = reactive({
       name: '苹果',
       color: '红色'
