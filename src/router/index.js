@@ -26,6 +26,7 @@ import ProvideLevelOne from '@/views/ProvideLevelOne'
 import ProvideLevelTwo from '@/components/ProvideLevelTwo'
 import ProvideLevelThree from '@/components/ProvideLevelThree'
 import CompositionApiProvideLevelOne from '@/views/CompositionApiProvideLevelOne'
+import CompositionApiProvideLevelOneReactive from '@/views/CompositionApiProvideLevelOneReactive'
 
 const routes = [
     {
@@ -120,6 +121,11 @@ const routes = [
       path: '/composition_api_demo_two_provide_and_inject',
       name: 'CompositionApiProvideLevelOne',
       component: CompositionApiProvideLevelOne
+    },
+    {
+      path: '/composition_api_demo_two_provide_and_inject_reactive',
+      name: 'CompositionApiProvideLevelOneReactive',
+      component: CompositionApiProvideLevelOneReactive
     },
     {
       path: '/non_composition_api',

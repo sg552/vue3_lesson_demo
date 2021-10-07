@@ -3,6 +3,12 @@
     我来自一级页面
     <ProvideLevelTwo></ProvideLevelTwo>
   </div>
+
+  <p>加强版：
+    <router-link :to="{name: 'CompositionApiProvideLevelOneReactive'}">
+      把可变的内容传递到下级组件
+    </router-link>
+  </p>
 </template>
 
 <script>
