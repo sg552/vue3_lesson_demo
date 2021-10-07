@@ -28,6 +28,9 @@ import ProvideLevelThree from '@/components/ProvideLevelThree'
 import CompositionApiProvideLevelOne from '@/views/CompositionApiProvideLevelOne'
 import CompositionApiProvideLevelOneReactive from '@/views/CompositionApiProvideLevelOneReactive'
 
+import Teleport from '@/views/Teleport'
+import NoTeleport from '@/views/NoTeleport'
+
 const routes = [
     {
       path: '/',
@@ -130,6 +133,17 @@ const routes = [
     {
       path: '/non_composition_api',
       component: NonCompositionApi
+    },
+
+    {
+      path: '/teleport',
+      name: 'Teleport',
+      component: Teleport
+    },
+    {
+      path: '/no_teleport',
+      name: 'NoTeleport',
+      component: NoTeleport
     },
 ]
 

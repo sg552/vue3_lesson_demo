@@ -67,10 +67,18 @@
 
       <li>
         <router-link :to="{name: 'CompositionApi'}">
-          composition API (vue3新特性, 组合式API)
+          composition API (vue3新特性, 组合式API) (todo)
         </router-link> 与
         <router-link to="/non_composition_api">
           options API (选项式API)
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{name: 'Teleport'}">
+          Teleport实现弹窗
+        </router-link> 与
+        <router-link :to="{name: 'NoTeleport'}">
+          非Teleport的传统方式
         </router-link>
       </li>
 
