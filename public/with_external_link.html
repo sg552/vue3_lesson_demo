@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
+</head>
+<body>
+    <div id='app'>
+        {{show_my_text}}
+    </div>
+    <script>
+        // 定义一个临时的对象, 该对象包含了一个data函数, 在data() 中，返回了一个对象，
+        // 该对象的一个key是show_my_text
+        // 可以简单的认为需要在页面渲染的变量都定义在data()中
+        let init = {
+            data: function() {
+                return {
+                    show_my_text: 'Vue.js is the best one page App!'
+                }
+            }
+        }
+        // 加载js代码并渲染页面，所有内容的渲染都是基于 <div id='app' >来操作的        
+        Vue.createApp(init).mount('#app')
+    </script>
+</body>
+</html>

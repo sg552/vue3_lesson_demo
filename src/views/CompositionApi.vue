@@ -23,8 +23,6 @@
 
 <script>
 import {ref, toRefs, onMounted } from 'vue'
-import blogSearch from '@/composables/blogSearch.js'
-import blogList from '@/composables/blogList.js'
 
 const axios = require('axios');
 

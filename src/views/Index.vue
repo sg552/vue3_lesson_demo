@@ -2,6 +2,9 @@
   <div>
     <p>例子列表</p>
     <ul>
+      <li>
+        <a href="/with_external_link.html" target="_blank">引入外部js文件的例子</a>
+      </li>
       <li><router-link :to="{name: 'Hello'}">
           Hello
         </router-link>:  显示最基本的Vuejs</li>
