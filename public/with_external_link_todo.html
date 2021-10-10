@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/todomvc-app-css@2.0.6/index.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/todomvc-app-css@2.2.0/index.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
 
 <script type="text/javascript">
  window.onload=function(){
-      
+
   var STORAGE_KEY = 'todos-vuejs'
   var todoStorage = {
     fetch: function () {
@@ -22,7 +22,7 @@
     }
   }
 
-  // visibility filters
+  // 过滤器, 用来根据条件过滤
   var filters = {
     all: function (todos) {
       return todos
@@ -39,17 +39,19 @@
     }
   }
 
-  // app Vue instance
+  // 创建Vue的实例(instance)
   var app = Vue.createApp({
-    // app initial state
+    // 设置页面用到的各种变量
     data() {
-      todos: todoStorage.fetch(),
-      newTodo: '',
-      editedTodo: null,
-      visibility: 'all'
+      return {
+        todos: todoStorage.fetch(),
+        newTodo: '',
+        editedTodo: null,
+        visibility: 'all'
+      }
     },
 
-    // watch todos change for localStorage persistence
+    // 监听变量的修改
     watch: {
       todos: {
         handler: function (todos) {
@@ -78,14 +80,7 @@
       }
     },
 
-    filters: {
-      pluralize: function (n) {
-        return n === 1 ? 'item' : 'items'
-      }
-    },
-
-    // methods that implement data logic.
-    // note there's no DOM manipulation here at all.
+    // 定义各种方法
     methods: {
       addTodo: function () {
         var value = this.newTodo && this.newTodo.trim()
@@ -125,9 +120,6 @@
         todo.title = this.beforeEditCache
       },
 
-      removeCompleted: function () {
-        this.todos = filters.active(this.todos)
-      }
     },
 
     directives: {
@@ -139,20 +131,6 @@
     }
   })
 
-  // handle routing
-  function onHashChange () {
-    var visibility = window.location.hash.replace(/#\/?/, '')
-    if (filters[visibility]) {
-      app.visibility = visibility
-    } else {
-      window.location.hash = ''
-      app.visibility = 'all'
-    }
-  }
-
-  window.addEventListener('hashchange', onHashChange)
-  onHashChange()
-
   app.mount('.todoapp')
 }
 </script>
@@ -161,10 +139,10 @@
 <body>
   <section class="todoapp">
   <header class="header">
-    <h1>todos</h1>
+    <h1>待办事项</h1>
     <input class="new-todo"
       autofocus autocomplete="off"
-      placeholder="What needs to be done?"
+      placeholder="例如:背10个单词. 回车保存, 双击编辑"
       v-model="newTodo"
       @keyup.enter="addTodo">
   </header>
@@ -191,18 +169,10 @@
   </section>
   <footer class="footer" v-show="todos.length" v-cloak>
     <span class="todo-count">
-      <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
+      <strong>{{ remaining }}</strong> left
     </span>
-    <ul class="filters">
-      <li><a href="#/all" :class="{ selected: visibility == 'all' }">All</a></li>
-      <li><a href="#/active" :class="{ selected: visibility == 'active' }">Active</a></li>
-      <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Completed</a></li>
-    </ul>
-    <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">
-      Clear completed
-    </button>
   </footer>
 </section>
- 
+
 </body>
 </html>
