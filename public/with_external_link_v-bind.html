@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
+</head>
+
+<body>
+    <div id='app'>
+        <p v-bind:style="'color:' + my_color">Vue.js 学起来好开心~ </p>
+        <button @click="change_color()">变颜色</button>
+    </div>
+    <script>
+        Vue.createApp({
+            el: '#app',
+            data() {
+              return {
+                my_color: 'green'
+              }
+            },
+            methods:{
+              change_color(){
+                this.my_color = this.my_color == 'green' ? 'red' : 'green'
+                console.info("== 新颜色是: ", this.my_color)
+              }
+            }
+        }).mount('#app')
+
+    </script>
+</body>
+</html>

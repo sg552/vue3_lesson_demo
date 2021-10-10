@@ -15,13 +15,15 @@
         </div>
         <div v-else>
             React
-        </div>        
+        </div>
     </div>
     <script>
-        var app = new Vue({
-            el: '#app', 
-            data: {    
+        Vue.createApp({
+            el: '#app',
+            data() {
+              return{
                 name: 'Vue.js'
+              }
             }
         })
     </script>

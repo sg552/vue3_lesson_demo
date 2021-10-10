@@ -3,7 +3,15 @@
     <p>例子列表</p>
     <ul>
       <li>
-        <a href="/with_external_link.html" target="_blank">引入外部js文件的例子</a>
+        引入外部js文件的例子:
+        1. <a href="/with_external_link.html" target="_blank">hello</a>
+        2. <a href="/with_external_link_todo.html" target="_blank">待办事项Demo</a>
+        3. <a href="/with_external_link_v-for.html" target="_blank">v-for循环显示</a>
+        4. <a href="/with_external_link_v-if.html" target="_blank">v-if判断显示</a>
+        5. <a href="/with_external_link_v-for_and_v-if.html" target="_blank">v-for与v-if结合使用</a>
+        6. <a href="/with_external_link_v-on.html" target="_blank">v-on使用事件</a>
+        7. <a href="/with_external_link_v-bind.html" target="_blank">v-bind绑定</a>
+        8. <a href="/with_external_link_two_way_binding.html" target="_blank">双向绑定</a>
       </li>
       <li><router-link :to="{name: 'Hello'}">
           Hello

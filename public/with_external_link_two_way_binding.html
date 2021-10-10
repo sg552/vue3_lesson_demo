@@ -1,0 +1,24 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
+</head>
+
+<body>
+    <div id='app'>
+        <p> 你好， {{name}} ! </p>
+        <input type='text' v-model="name" />
+    </div>
+    <script>
+        // 这里定义了 app, 就可以在其他地方通过 app.$data.name 来修改name 变量
+        let app = Vue.createApp({
+            el: '#app',
+            data() {
+              return {
+                // 下面一行代码不能省略。 这里声明了name变量
+                name: 'Vue.js（默认)'
+              }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
