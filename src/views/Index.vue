@@ -59,14 +59,35 @@
       <li>Watch: 
         <a href="/with_external_link_watch.html" target="_blank">Watch(纯Vue)</a>, 
         <a href="/with_external_link_watch_replaced_by_computed.html" target="_blank">Watch的等效computed的写法(纯Vue)</a>, 
-
       </li>
+
       <li>Vuex的例子: <router-link :to="{name: 'ShowCounter1'}">
           倒计时页面1
         </router-link></li>
       <li><router-link :to="{name: 'ShowCounter2'}">
           倒计时页面2
         </router-link></li>
+
+      <li>
+        <ul>Event(事件): 
+          <li>
+            <a href="/event_v-on1.html" target="_blank">v-on 1. 没有声明方法，使用了inline形式的代码</a>, 
+          </li>
+          <li>
+            <a href="/event_v-on2.html" target="_blank">v-on 2. 调用了具体方法</a>, 
+          </li>
+          <li>
+            <a href="/event_v-on3.html" target="_blank">v-on 3. 方法中增加了参数</a>, 
+          </li>
+          <li>
+            <a href="/event_preventdefault.html" target="_blank">preventDefault: 终止当前事件的传递</a>, 
+          </li>
+          <li>
+            <a href="/event_prevent_modifier.html" target="_blank">modifier: event修饰词</a>, 
+          </li>
+
+        </ul>
+      </li>
       <li>
           单元测试: 在控制台,运行该命令即可: $ npm run test:unit <br/>
           具体内容见 tests/unit/calculator.spec.js 和 src/lib/calculator.js
