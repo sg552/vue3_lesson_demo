@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
+</head>
+<body>
+  <div id='app'>
+    <study-process></study-process>
+  </div>
+  <script>
+
+    const app = Vue.createApp({})    
+    app.component('study-process', {
+      data() {
+        return {
+          count: 0
+        }
+      },
+      template: '<button v-on:click="count++">我学习到了第{{count}}章.</button>'
+    })
+    app.mount('#app')
+  </script>
+</body>
+</html>

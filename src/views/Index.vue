@@ -44,10 +44,23 @@
         <router-link :to="{name: 'Blog', query: {id: 1000}}">
           Blog
         </router-link>
+        ，脱离webpack, 在纯vue的环境下使用: 
+        <a href="/with_external_link_component.html" target="_blank">引入外部js文件创建组件</a>, 
+        <a href="/with_external_link_component_slot.html" target="_blank">Slot</a>, 
+        <a href="/with_external_link_component_slot_with_name.html" target="_blank">Named Slot</a>, 
       </li>
       <li><router-link :to="{name: 'SayHiFromMixin'}">
           SayHiFromMixin
-        </router-link>: Mixin的例子.</li>
+        </router-link>: Mixin的例子</li>
+      <li>Computed: 
+        <a href="/with_external_link_computed.html" target="_blank">Computed(纯Vue)</a>, 
+        <a href="/with_external_link_computed_replaced_by_method.html" target="_blank">Computed的等效methods的写法(纯Vue)</a>
+      </li>
+      <li>Watch: 
+        <a href="/with_external_link_watch.html" target="_blank">Watch(纯Vue)</a>, 
+        <a href="/with_external_link_watch_replaced_by_computed.html" target="_blank">Watch的等效computed的写法(纯Vue)</a>, 
+
+      </li>
       <li>Vuex的例子: <router-link :to="{name: 'ShowCounter1'}">
           倒计时页面1
         </router-link></li>
