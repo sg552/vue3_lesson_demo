@@ -5,36 +5,24 @@
 
 <body>
     <div id='app'>
-        请输入您想打开的网址,       <br/>
-        判断规则是：                 <br/>
-        1. 务必以 "http://"开头     <br/>
-        2. 不能是空字符串            <br/>
-        <input v-model="url" placeholder="请输入 http:// 开头的字符串, 否则不会跳转" /> <br/>
-        <br/>
-        <a v-bind:href="this.url" @click='validate($event)' @click.prevent='show_message'> 点我确定 </a>
-    </div>    
+        <p>本页显示parent和child区域的click与click.prevent的用法:</p>
+        
+        <div @click="click_parent()" style='width: 500px; border: 1px solid red'>
+          <p>本区域属于parent, 点击这里，只调用 parent的click事件 </p>
+          <p @click.stop='show_message' style='width: 400px; border: 1px solid blue'>
+          本区域属于child, 点击这里，只调用child的click事件 </p>
+        </div>
+    </div>
+
     <script>
     Vue.createApp({
-        data() {
-          return {
-            url: ""
-          }
-        },
         methods: {
-          validate: function(event){
-            if(this.url.length == 0 || this.url.indexOf('http://') != 0){
-              if(event){
-                console.info("== prevented")
-                event.preventDefault()
-              }   
-            }else{
-              console.info("== it's OK")
+            show_message: function(){
+                alert("您点击了child 区域，根据click.stop，本次事件不会传递给parent")
+            },
+            click_parent: function(){
+                alert("您点击了parent 区域")
             }
-          },
-          show_message: function(){
-            alert("有问题。您输入的网址不符合规则，无法跳转")
-            console.info("== in show_message, prevented")
-          }
         }            
     }).mount('#app')
     </script>
