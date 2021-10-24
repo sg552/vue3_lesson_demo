@@ -9,16 +9,20 @@
         
         <div @click="click_parent()" style='width: 500px; border: 1px solid red'>
           <p>本区域属于parent, 点击这里，只调用 parent的click事件 </p>
-          <p @click.stop='show_message' style='width: 400px; border: 1px solid blue'>
-          本区域属于child, 点击这里，只调用child的click事件 </p>
+
+          <p @click.stop='click_child()' style='width: 400px; border: 1px solid blue'>
+          本区域属于child1, 点击这里，只调用child的click事件 </p>
+
+          <p @click='click_child()' style='width: 400px; border: 1px solid blue'>
+          本区域属于child2, 点击这里，会调用两个click事件（parent + child) </p>
         </div>
     </div>
 
     <script>
     Vue.createApp({
         methods: {
-            show_message: function(){
-                alert("您点击了child 区域，根据click.stop，本次事件不会传递给parent")
+            click_child: function(){
+                alert("您点击了child 区域")
             },
             click_parent: function(){
                 alert("您点击了parent 区域")

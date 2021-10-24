@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
+</head>
+
+<body>
+    <div id='app'>
+        下面是使用了自定义Directive的input, 可以自动聚焦（ 调用 focus() 方法) : <br/>
+        <br/>
+        <p v-biglist="a_very_big_list"/></p>
+
+    </div>
+
+    <script>
+    Vue.createApp({
+        data(){
+            let a_very_big_list = []
+            for(let i = 0; i < 5000; i++){
+                a_very_big_list.push("I am the data:" + (i + 1))
+            }
+            return {
+                a_very_big_list: a_very_big_list
+            }
+        },
+        directives: {
+            biglist: {
+                mounted: function(element, binding){
+                    console.info("== binding: ", binding)
+                    for(let i = 0; i < binding.value.length; i++){
+                        element.innerHTML += binding.value[i] + "<br/>"
+                    }
+                }
+            }
+        }        
+    }).mount('#app')
+    </script>
+</body>
+</html>

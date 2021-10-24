@@ -68,8 +68,8 @@
           倒计时页面2
         </router-link></li>
 
-      <li>
-        <ul>Event(事件): 
+      <li>Event(事件): 
+        <ul>
           <li>
             <a href="/event_v-on1.html" target="_blank">v-on 1. 没有声明方法，使用了inline形式的代码</a>, 
           </li>
@@ -83,9 +83,23 @@
             <a href="/event_preventdefault.html" target="_blank">preventDefault: 终止当前事件的传递</a>, 
           </li>
           <li>
-            <a href="/event_prevent_modifier.html" target="_blank">modifier: event修饰词</a>, 
+            <a href="/event_modifier.html" target="_blank">modifier: event修饰词</a>, 
+          </li>
+          <li>
+            <a href="/event_key_modifier.html" target="_blank">modifier: event的按键修饰词</a>, 
           </li>
 
+        </ul>
+      </li>
+      <li>
+        自定义标签：
+        <ul>
+          <li>
+            <a href="/custom_directive1.html" target="_blank">例子1</a>, 
+          </li>
+          <li>
+            <a href="/custom_directive2.html" target="_blank">例子2</a>, 
+          </li>        
         </ul>
       </li>
       <li>

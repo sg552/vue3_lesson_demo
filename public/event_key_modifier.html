@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"></script>
+</head>
+
+<body>
+   <div id='app'>
+        输入完毕后，按下回车键，就会<br/>
+        触发 "show_message" 事件~  <br/><br/>
+        {{message}}
+        <input v-on:keyup.enter="show_message" v-model="message" />
+    </div>
+    <script>
+    Vue.createApp({
+        methods: {
+            show_message: function(){
+                alert("您输入了：" + this.message)
+            }            
+        }            
+    }).mount('#app')
+    </script>
+</body>
+</html>
