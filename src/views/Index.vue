@@ -22,6 +22,9 @@
       <li><router-link :to="{name: 'SayHiFromVariable'}">
           SayHiFromVariable
         </router-link>: 在页面中使用参数</li>
+      <li><router-link :to="{name: 'SayHiFromMethod'}">
+          SayHiFromMethod
+        </router-link>: 在页面中调用方法</li>        
       <li><router-link :to="{name: 'BlogList'}">
           BlogList
         </router-link>: 调用真实接口, 并渲染出博客列表</li>
@@ -59,6 +62,7 @@
       <li>Watch: 
         <a href="/with_external_link_watch.html" target="_blank">Watch(纯Vue)</a>, 
         <a href="/with_external_link_watch_replaced_by_computed.html" target="_blank">Watch的等效computed的写法(纯Vue)</a>, 
+        <a href="/with_external_link_watch_replaced_by_computed_with_setter_getter.html" target="_blank">Watch的等效computed的写法(纯Vue, getter/setter)</a>, 
       </li>
 
       <li>Vuex的例子: <router-link :to="{name: 'ShowCounter1'}">
@@ -98,10 +102,18 @@
             <a href="/custom_directive1.html" target="_blank">例子1</a>, 
           </li>
           <li>
-            <a href="/custom_directive2.html" target="_blank">例子2</a>, 
+            <a href="/custom_directive_binding.html" target="_blank">例子2: binding</a>, 
+          </li>          
+          <li>
+            <a href="/custom_directive2.html" target="_blank">例子3: 渲染大容量数组</a>, 
           </li>        
         </ul>
       </li>
+      <li>
+        <router-link :to="{name: 'ApplicationConfig'}">
+          全局配置 ApplicationConfig
+        </router-link> 
+      </li>      
       <li>
           单元测试: 在控制台,运行该命令即可: $ npm run test:unit <br/>
           具体内容见 tests/unit/calculator.spec.js 和 src/lib/calculator.js

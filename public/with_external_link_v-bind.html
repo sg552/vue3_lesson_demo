@@ -5,7 +5,7 @@
 
 <body>
     <div id='app'>
-        <p v-bind:style="'color:' + my_color">Vue.js 学起来好开心~ </p>
+        <p v-bind:style="'color:' + my_color">Vue.js 学起来好开心~ (颜色： {{my_color}}) </p>
         <button @click="change_color()">变颜色</button>
     </div>
     <script>

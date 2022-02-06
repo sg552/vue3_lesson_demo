@@ -4,25 +4,24 @@
 </head>
 
 <body>
-    <div id='app'>
-        {{ message }}
-        <br/>
-        <button v-on:click='say_hi("明日的Vue.js大神")' style='margin-top: 50px'> 跟我打个招呼~ </button>
-    </div>    
-    <script>
-        Vue.createApp({
-            data() {
-              return {
-                message: "这是一个在click中调用方法 + 参数的例子"
-              }
-            },
-            methods: {
-                say_hi: function(name){
-                    this.message = "你好啊，" + name + "!"
-                }
-            }
-            
-        }).mount('#app')
-    </script>
+  <div id='app'>
+    {{ message }}
+    <br/>
+    <button v-on:click='say_hi("明日的Vue.js大神")' style='margin-top: 50px'> 跟我打个招呼~ </button>
+  </div>    
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          message: "这是一个在click中调用方法 + 参数的例子"
+        }
+      },
+      methods: {
+        say_hi: function(name){
+          this.message = "你好啊，" + name + "!"
+        }
+      }
+    }).mount('#app')
+  </script>
 </body>
 </html>

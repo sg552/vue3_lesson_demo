@@ -1,0 +1,31 @@
+<html>
+<body>
+    <p>下面是对proxy的使用的测试，需要结合代码和console的输出来查看：</p>
+
+    <script>
+const colors = {
+  apple_color: "red",
+  banana_color: "yellow"
+};
+
+const handler = {
+  // getter方法，用来读取某个对象的属性时被触发，例如 target.message1
+  get: function(target, prop, receiver) {
+    console.info("in handler, get: target: ", target, ", prop: ", prop, ", receiver: ", receiver)
+    return target[prop] + " -- from proxy";
+  },
+  set: function(target, prop, value){
+    console.info("in handler, set: target: ", target, ", prop: ", prop, ", value: ", value)
+    return target[prop] =value  ;   
+  }
+};
+
+// 记得以后所有的调用都从proxy来调用。
+const proxy = new Proxy(colors, handler);
+
+console.info(proxy.apple_color)
+proxy.apple_color = "green"
+console.info(proxy.apple_color)
+    </script>
+</body>
+</html>

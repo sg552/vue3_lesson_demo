@@ -6,12 +6,12 @@
 
     <div id='app'>
         <p> 
-            我所在的城市： <input v-model='city' />（这是个watched property)
+            我所在的城市： <input v-model='city' />
         </p>
         <p> 
-            我所在的街道： <input v-model='district' />（这是个watched property)
+            我所在的街道： <input v-model='district' />
         </p>
-        <p> 我所在的详细一些的地址： {{full_address}} <input v-model='full_address' /></p>
+        <p> 我所在的详细一些的地址：    <input v-model='full_address' style='width: 200px' /> </p>        
     </div>
     <script>
         Vue.createApp({
@@ -22,10 +22,16 @@
                 }
             },
             computed: {
-                full_address: function(){
-                    return this.city + '-' + this.district;
+                full_address: {
+                    get: function(){
+                        return this.city + "-" + this.district;
+                    },
+                    set: function(new_value){
+                        this.city = new_value.split('-')[0]
+                        this.district = new_value.split('-')[1]
+                    }
                 }
-            }            
+            }
         }).mount('#app')
     </script>
 </body>

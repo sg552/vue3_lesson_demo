@@ -13,8 +13,12 @@ export default {
 </script>
 
 <style>
+  /*
 .hi {
   color: red;
   font-size: 20px;
+
+  font-style: italic;
 }
+*/
 </style>

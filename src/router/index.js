@@ -6,6 +6,7 @@ import Blog from '@/views/Blog'
 
 import SayHi from '@/views/SayHi'
 import SayHiFromVariable from '@/views/SayHiFromVariable'
+import SayHiFromMethod from '@/views/SayHiFromMethod'
 
 import TwoWayBinding from '@/views/TwoWayBinding'
 import FormInput from '@/views/FormInput'
@@ -30,6 +31,8 @@ import CompositionApiProvideLevelOneReactive from '@/views/CompositionApiProvide
 
 import Teleport from '@/views/Teleport'
 import NoTeleport from '@/views/NoTeleport'
+
+import ApplicationConfig from '@/views/ApplicationConfig'
 
 const routes = [
     {
@@ -58,6 +61,11 @@ const routes = [
       name: 'SayHiFromVariable',
       component: SayHiFromVariable
     },
+    {
+      path: '/say_hi_from_method',
+      name: 'SayHiFromMethod',
+      component: SayHiFromMethod
+    },    
     {
       path: '/blogs',
       name: 'BlogList',
@@ -145,6 +153,11 @@ const routes = [
       name: 'NoTeleport',
       component: NoTeleport
     },
+    {
+      path: '/application_config',
+      name: 'ApplicationConfig',
+      component: ApplicationConfig
+    },    
 ]
 
 const router = createRouter({
