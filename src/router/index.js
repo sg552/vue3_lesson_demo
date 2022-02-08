@@ -34,6 +34,10 @@ import NoTeleport from '@/views/NoTeleport'
 
 import ApplicationConfig from '@/views/ApplicationConfig'
 
+import ComponentsCommunicationEmit from '@/views/ComponentsCommunicationEmit'
+import ComponentsCommunicationRef from '@/views/ComponentsCommunicationRef'
+// import ComponentsCommunicationSlot from '@/views/ComponentsCommunicationSlot'
+
 const routes = [
     {
       path: '/',
@@ -158,6 +162,23 @@ const routes = [
       name: 'ApplicationConfig',
       component: ApplicationConfig
     },    
+    {
+      path: '/component_communication_emit',
+      name: 'ComponentsCommunicationEmit',
+      component: ComponentsCommunicationEmit
+    },    
+    {
+      path: '/component_communication_ref',
+      name: 'ComponentsCommunicationRef',
+      component: ComponentsCommunicationRef
+    },    
+    /*
+    {
+      path: '/component_communication_slot',
+      name: 'ComponentsCommunicationSlot',
+      component: ComponentsCommunicationSlot
+    },
+    */            
 ]
 
 const router = createRouter({

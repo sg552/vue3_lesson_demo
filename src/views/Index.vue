@@ -40,17 +40,38 @@
       <li><router-link :to="{name: 'FormSubmit'}">
           FormSubmit
         </router-link>: 提交表单的例子.</li>
-      <li> 组件的使用,见:
-        <router-link :to="{name: 'BlogList'}">
-          BlogList
-        </router-link> 和
-        <router-link :to="{name: 'Blog', query: {id: 1000}}">
-          Blog
-        </router-link>
-        ，脱离webpack, 在纯vue的环境下使用: 
-        <a href="/with_external_link_component.html" target="_blank">引入外部js文件创建组件</a>, 
-        <a href="/with_external_link_component_slot.html" target="_blank">Slot</a>, 
-        <a href="/with_external_link_component_slot_with_name.html" target="_blank">Named Slot</a>, 
+      <li> Componenet 组件的使用:
+        <ul>
+          <li>
+            <router-link :to="{name: 'BlogList'}">
+              BlogList
+            </router-link> 和
+            <router-link :to="{name: 'Blog', query: {id: 1000}}">
+              Blog
+            </router-link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+        在纯vue的环境下使用: 
+            <a href="/with_external_link_component.html" target="_blank">引入外部js文件创建组件</a>, 
+            <a href="/with_external_link_component_slot.html" target="_blank">Slot</a>, 
+            <a href="/with_external_link_component_slot_with_name.html" target="_blank">Named Slot</a>, 
+          </li>
+        </ul>
+        <ul>
+          与父组件的通信
+          <li>
+            <router-link :to="{name: 'ComponentsCommunicationEmit'}">
+              1. 使用Emit来实现
+            </router-link> 
+
+            <router-link :to="{name: 'ComponentsCommunicationRef'}">
+              2. Ref
+            </router-link>
+          </li>
+        </ul>
+
       </li>
       <li><router-link :to="{name: 'SayHiFromMixin'}">
           SayHiFromMixin
