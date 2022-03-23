@@ -65,10 +65,15 @@
             <router-link :to="{name: 'ComponentsCommunicationEmit'}">
               1. 使用Emit来实现
             </router-link> 
-
+            &nbsp;
             <router-link :to="{name: 'ComponentsCommunicationRef'}">
-              2. Ref
+              2. Refs
             </router-link>
+            &nbsp;
+            <router-link :to="{name: 'ComponentsCommunicationSlot'}">
+              3. Slot
+            </router-link>
+
           </li>
         </ul>
 

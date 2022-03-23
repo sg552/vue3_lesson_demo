@@ -36,7 +36,7 @@ import ApplicationConfig from '@/views/ApplicationConfig'
 
 import ComponentsCommunicationEmit from '@/views/ComponentsCommunicationEmit'
 import ComponentsCommunicationRef from '@/views/ComponentsCommunicationRef'
-// import ComponentsCommunicationSlot from '@/views/ComponentsCommunicationSlot'
+import ComponentsCommunicationSlot from '@/views/ComponentsCommunicationSlot'
 
 const routes = [
     {
@@ -172,13 +172,11 @@ const routes = [
       name: 'ComponentsCommunicationRef',
       component: ComponentsCommunicationRef
     },    
-    /*
     {
       path: '/component_communication_slot',
       name: 'ComponentsCommunicationSlot',
       component: ComponentsCommunicationSlot
     },
-    */            
 ]
 
 const router = createRouter({
