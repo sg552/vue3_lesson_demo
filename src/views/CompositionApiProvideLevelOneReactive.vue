@@ -1,7 +1,7 @@
 <template>
   <div>
     我来自一级页面, 请输入任意内容:
-    <input v-model="readme_from_level_one" />
+    <input v-model="readme_from_level_one" style='width: 250px'/>
     <ProvideLevelTwo></ProvideLevelTwo>
 
   </div>
